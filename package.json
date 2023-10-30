@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kaiedhazem/gitlabator.git"
+    "url": "git+https://github.com/kaiedhazem/gitlabator-plugin.git"
   },
   "keywords": [
     "Leto-modelizer",
@@ -25,9 +25,9 @@
   "author": "Kaied Hazem <gaiedhazem@gmail.com>",
   "license": "Mozilla Public License 2.0",
   "bugs": {
-    "url": "https://github.com/kaiedhazem/gitlabator.git"
+    "url": "https://github.com/kaiedhazem/gitlabator-plugin.git"
   },
-  "homepage": "https://github.com/kaiedhazem/gitlabator.git",
+  "homepage": "https://github.com/kaiedhazem/gitlabator-plugin.git",
   "dependencies": {
     "leto-modelizer-plugin-core": "github:ditrit/leto-modelizer-plugin-core#0.17.0",
     "lidy-js": "github:ditrit/lidy-js#1.0.1",
