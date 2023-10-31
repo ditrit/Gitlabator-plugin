@@ -2,8 +2,8 @@
   "name": "gitlabator-plugin",
   "version": "0.1.0",
   "description": "gitlab-plugin for leto-modelizer",
-  "main": "dist/Gitlabator-plugin.js",
-  "exports": "./dist/Gitlabator-plugin.js",
+  "main": "dist/gitlabator-plugin.js",
+  "exports": "./dist/gitlabator-plugin.js",
   "scripts": {
     "build": "webpack",
     "build:docs": "jsdoc --readme README.md --package package.json -r ./src/ -c jsdoc.config.json -d docs",
@@ -20,16 +20,16 @@
   },
   "keywords": [
     "Leto-modelizer",
-    "Gitlabator-plugin"
+    "gitlabator-plugin"
   ],
   "author": "Kaied Hazem <gaiedhazem@gmail.com>",
   "license": "Mozilla Public License 2.0",
   "bugs": {
-    "url": "https://github.com/kaiedhazem/gitlabator-plugin.git"
+    "url": "https://github.com/kaiedhazem/gitlabator-plugin.git/issues"
   },
-  "homepage": "https://github.com/kaiedhazem/gitlabator-plugin.git",
+  "homepage": "https://github.com/kaiedhazem/gitlabator-plugin.git#readme",
   "dependencies": {
-    "leto-modelizer-plugin-core": "github:ditrit/leto-modelizer-plugin-core#0.17.0",
+    "leto-modelizer-plugin-core": "github:ditrit/leto-modelizer-plugin-core#0.21.0",
     "lidy-js": "github:ditrit/lidy-js#1.0.1",
     "nunjucks": "=3.2.4"
   },
