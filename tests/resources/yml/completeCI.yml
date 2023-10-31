@@ -1,0 +1,44 @@
+name: CI
+stages:
+    - test
+    - build
+tags:
+    - tags
+    - runner
+variables:
+    image_name: docker-dind
+services:
+  - name: my-postgres
+    alias: db-postgres
+    entrypoint: test
+test_job:
+    image: test
+    stage: test
+    before_script: 
+      - echo "start"
+      - run cleanup
+ 
+    script: 
+      - make tests
+ 
+    after_script: 
+      - echo "done"
+    only: master
+    when: success
+    environment: test2
+build_job:
+    tags:
+      - build   
+      - test   
+    image: maven:8.6
+    stage: build
+    before_script: 
+      - echo "start"
+      - run cleanup
+ 
+    script: 
+      - mvn clean install
+ 
+    after_script: 
+      - echo "done"
+    only: main

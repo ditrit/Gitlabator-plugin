@@ -17,14 +17,14 @@
     "monospaceLinks": false,
     "search": true,
     "better-docs": {
-      "name": "terrator-plugin",
+      "name": "gitlabator-plugin",
       "css": "style.css",
       "trackingCode": "tracking-code-which-will-go-to-the-HEAD",
       "hideGenerator": false,
       "navLinks": [
         {
           "label": "Github",
-          "href": "https://github.com/ditrit/terrator-plugin#README.md"
+          "href": "https://github.com/kaiedhazem/gitlabator-plugin.git"
         }
       ]
     }
