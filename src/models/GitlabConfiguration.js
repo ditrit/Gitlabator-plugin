@@ -1,7 +1,10 @@
+/* eslint-disable import/no-useless-path-segments */
+/* eslint-disable no-restricted-imports */
 import { DefaultConfiguration, Tag } from 'leto-modelizer-plugin-core';
+import syntax from 'src/configuration/syntax';
 
 /**
- * Gitlab configuration.
+ * Gitlabator configuration.
  */
 class GitlabConfiguration extends DefaultConfiguration {
   /**
@@ -11,15 +14,15 @@ class GitlabConfiguration extends DefaultConfiguration {
   constructor(props) {
     super({
       ...props,
-      defaultFileName: '.gitlab-ci.yml',
-      defaultFileExtension: 'yml',
       editor: {
-        ...props?.editor,
+        ...props.editor,
+        syntax,
       },
       tags: [
         new Tag({ type: 'language', value: 'Gitlab' }),
         new Tag({ type: 'category', value: 'CI' }),
         new Tag({ type: 'category', value: 'CD' }),
+        new Tag({ type: 'category', value: 'Pipeline' }),
       ],
     });
   }

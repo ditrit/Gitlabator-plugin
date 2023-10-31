@@ -1,6 +1,6 @@
 import GitlabPlugin from 'src/models/GitlabPlugin';
 
-describe('Test class: GitlabPlugin', () => {
+describe('Test class: GitlabatorPlugin', () => {
   describe('Test constructor', () => {
     it('Check variable initialization', () => {
       const plugin = new GitlabPlugin();

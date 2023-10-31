@@ -1,0 +1,141 @@
+[
+  {
+    "type": "gitlabCi",
+    "model": "gitlabCi",
+    "icon": "DefaultGitlabCi",
+    "childrenPerLine": 999,
+    "displayType": "workflow",
+    "displayName": "gitlabCi",
+    "preventChildrenMovement": true,
+    "isContainer": true,
+    "available": true,
+    "childrenTypes": [
+      "jobCi",
+      "service"
+    ],
+    "attributes": [
+      {
+        "name": "name",
+        "type": "String",
+        "required": true
+      },
+      {
+        "name": "stages",
+        "type": "Array",
+        "required": false
+      },
+      {
+        "name": "tags",
+        "type": "Array",
+        "required": false
+      },
+      {
+        "name": "variables",
+        "type": "Object"
+      }
+    ]
+  },
+  {
+    "type": "jobCi",
+    "model": "jobCi",
+    "icon": "DefaultJobCi",
+    "displayType": "workflow",
+    "displayName": "jobCi",
+    "isContainer": false,
+    "available": true,
+    "parentTypes": [
+      "gitlabCi"
+    ],
+    "attributes": [
+      {
+        "name": "gitlabCi_id",
+        "displayName": "Id of gitlabCi",
+        "type": "Reference",
+        "containerRef": "gitlabCi",
+        "required": true
+      },
+      {
+        "name": "tags",
+        "type": "Array",
+        "required": false
+      },
+      {
+          "name": "image",
+          "type": "String",
+          "required": false
+        },
+        {
+            "name": "stage",
+            "type": "String",
+            "required": false
+        },
+        {
+            "name": "beforescript",
+            "type": "Array",
+            "required": false
+          },
+          {
+            "name": "script",
+            "type": "Array",
+            "required": true
+          },
+          {
+            "name": "afterscript",
+            "type": "Array",
+            "required": false
+          },
+          {
+            "name": "only",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "when",
+            "type": "String",
+            "required": false
+          },
+          {
+            "name": "environment",
+            "type": "String",
+            "required": false
+          }
+          
+    ]
+  },
+  {
+    "type": "service",
+    "model": "jobCi",
+    "displayType": "workflow",
+    "displayName": "service",
+    "icon": "DefaultService",
+    "isContainer": false,
+    "available": true,
+    "parentTypes": [
+      "gitlabCi"
+    ],
+    "attributes": [
+      {
+        "name": "gitlabCi_id",
+        "displayName": "Id of gitlabCi",
+        "type": "Reference",
+        "containerRef": "gitlabCi",
+        "required": true
+      },
+      {
+          "name": "name",
+          "type": "String",
+          "required": true
+        },
+        {
+            "name": "alias",
+            "type": "String",
+            "required": false
+        },
+        {
+            "name": "entrypoint",
+            "type": "String",
+            "required": false
+          }
+    ]
+  }
+]

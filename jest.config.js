@@ -26,7 +26,7 @@ module.exports = {
   transform: {
     '^.+\\.(js|jsx)?$': 'babel-jest',
   },
-  transformIgnorePatterns: ['<rootDir>/node_modules/(?!antlr)'],
+  transformIgnorePatterns: ['<rootDir>/node_modules/(?!lidy)'],
   testResultsProcessor: 'jest-sonar-reporter',
   collectCoverage: true,
   collectCoverageFrom: ['src/**/*.js'],

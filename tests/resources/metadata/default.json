@@ -1,0 +1,472 @@
+[
+  {
+    "type": "gitlabCi",
+    "icon": "DefaultGitlabCi",
+    "model": "gitlabCi",
+    "displayName": "gitlabCi",
+    "description": null,
+    "url": null,
+    "parentTypes": [],
+    "childrenTypes": [
+      "jobCi",
+      "service"
+    ],
+    "definedAttributes": [
+      { 
+        "name": "name",
+        "type": "String",
+        "displayName": null,
+        "description": null,
+        "displayType": null,
+        "expanded": false,
+        "url": null,
+        "linkType": null,
+        "linkRef": [],
+        "linkColor": "black",
+        "linkWidth": 2,
+        "linkDashStyle": null,
+        "containerRef": null,
+        "definedAttributes": [],
+        "required": true,
+        "rules": {
+          "values": null,
+          "min": null,
+          "max": null,
+          "regex": null
+        }
+      },
+      {
+        "name": "stages",
+        "type": "Array",
+        "displayName": null,
+        "description": null,
+        "displayType": null,
+        "expanded": false,
+        "url": null,
+        "linkType": null,
+        "linkRef": [],
+        "linkColor": "black",
+        "linkWidth": 2,
+        "linkDashStyle": null,
+        "containerRef": null,
+        "definedAttributes": [],
+        "required": false,
+        "rules": {
+          "values": null,
+          "min": null,
+          "max": null,
+          "regex": null
+        }
+      },
+      {
+        "name": "tags",
+        "type": "Array",
+        "displayName": null,
+        "description": null,
+        "displayType": null,
+        "expanded": false,    
+        "url": null,
+        "linkType": null,
+        "linkRef": [],
+        "linkColor": "black",
+        "linkWidth": 2,
+        "linkDashStyle": null,
+        "containerRef": null,
+        "definedAttributes": [],
+        "required": false,
+        "rules": {
+          "values": null,
+          "min": null,
+          "max": null,
+          "regex": null
+        }
+      },
+      {
+        "name": "variables",
+        "type": "Object",
+        "displayName": null,
+        "description": null,
+        "displayType": null,
+        "expanded": false,   
+        "url": null,
+        "linkType": null,
+        "linkRef": [],
+        "linkColor": "black",
+        "linkWidth": 2,
+        "linkDashStyle": null,
+        "containerRef": null,
+        "definedAttributes": [],
+        "required": false,
+        "rules": {
+          "values": null,
+          "min": null,
+          "max": null,
+          "regex": null
+        }
+      }
+    ],
+    "isContainer": true,
+    "displayType": "workflow",
+    "preventChildrenMovement": true,
+    "childrenPerLine": 999
+  },
+  {
+    "type": "jobCi",
+    "icon": "DefaultJobCi",
+    "model": "jobCi",
+    "displayName": "jobCi",
+    "description": null,
+    "url": null,
+    "parentTypes": [
+      "gitlabCi"
+    ],
+    "childrenTypes": [],
+    "definedAttributes": [
+      {
+        "name": "gitlabCi_id",
+        "type": "Reference",
+        "displayName": "Id of gitlabCi",
+        "description": null,
+        "displayType": null,
+        "expanded": false,   
+        "url": null,
+        "linkType": null,
+        "linkRef": [],
+        "linkColor": "black",
+        "linkWidth": 2,
+        "linkDashStyle": null,
+        "containerRef": "gitlabCi",
+        "definedAttributes": [],
+        "required": true,
+        "rules": {
+          "values": null,
+          "min": null,
+          "max": null,
+          "regex": null
+        }
+      },
+      {
+        "name": "tags",
+        "type": "Array",
+        "displayName": null,
+        "description": null,
+        "displayType": null,
+        "expanded": false,   
+        "url": null,
+        "linkType": null,
+        "linkRef": [],
+        "linkColor": "black",
+        "linkWidth": 2,
+        "linkDashStyle": null,
+        "containerRef": null,
+        "definedAttributes": [],
+        "required": false,
+        "rules": {
+          "values": null,
+          "min": null,
+          "max": null,
+          "regex": null
+        }
+      },
+      {
+          "name": "image",
+          "type": "String",
+          "displayName": null,
+          "description": null,
+          "displayType": null,
+          "expanded": false,   
+          "url": null,
+          "linkType": null,
+          "linkRef": [],
+          "linkColor": "black",
+          "linkWidth": 2,
+          "linkDashStyle": null,
+          "containerRef": null,
+          "definedAttributes": [],
+          "required": false,
+          "rules": {
+            "values": null,
+            "min": null,
+            "max": null,
+            "regex": null
+          }
+        },
+        {
+            "name": "stage",
+            "type": "String",
+            "displayName": null,
+            "description": null,
+            "displayType": null,
+            "expanded": false,   
+            "url": null,
+            "linkType": null,
+            "linkRef": [],
+            "linkColor": "black",
+            "linkWidth": 2,
+            "linkDashStyle": null,
+            "containerRef": null,
+            "definedAttributes": [],
+            "required": false,
+            "rules": {
+              "values": null,
+              "min": null,
+              "max": null,
+              "regex": null
+            }
+        },
+        {
+            "name": "beforescript",
+            "type": "Array",
+            "displayName": null,
+            "description": null,
+            "displayType": null,
+            "expanded": false,   
+            "url": null,
+            "linkType": null,
+            "linkRef": [],
+            "linkColor": "black",
+            "linkWidth": 2,
+            "linkDashStyle": null,
+            "containerRef": null,
+            "definedAttributes": [],
+            "required": false,
+            "rules": {
+              "values": null,
+              "min": null,
+              "max": null,
+              "regex": null
+            }
+          },
+          {
+            "name": "script",
+            "type": "Array",
+            "displayName": null,
+            "description": null,
+            "displayType": null,
+            "expanded": false,   
+            "url": null,
+            "linkType": null,
+            "linkRef": [],
+            "linkColor": "black",
+            "linkWidth": 2,
+            "linkDashStyle": null,
+            "containerRef": null,
+            "definedAttributes": [],
+            "required": true,
+            "rules": {
+              "values": null,
+              "min": null,
+              "max": null,
+              "regex": null
+            }
+          },
+          {
+            "name": "afterscript",
+            "type": "Array",
+            "displayName": null,
+            "description": null,
+            "displayType": null,
+            "expanded": false,   
+            "url": null,
+            "linkType": null,
+            "linkRef": [],
+            "linkColor": "black",
+            "linkWidth": 2,
+            "linkDashStyle": null,
+            "containerRef": null,
+            "definedAttributes": [],
+            "required": false,
+            "rules": {
+              "values": null,
+              "min": null,
+              "max": null,
+              "regex": null
+            }
+          },
+          {
+            "name": "only",
+            "type": "String",
+            "displayName": null,
+            "description": null,
+            "displayType": null,
+            "expanded": false,   
+            "url": null,
+            "linkType": null,
+            "linkRef": [],
+            "linkColor": "black",
+            "linkWidth": 2,
+            "linkDashStyle": null,
+            "containerRef": null,
+            "definedAttributes": [],
+            "required": false,
+            "rules": {
+              "values": null,
+              "min": null,
+              "max": null,
+              "regex": null
+            }
+          },
+          {
+            "name": "when",
+            "type": "String",
+            "displayName": null,
+            "description": null,
+            "displayType": null,
+            "expanded": false,   
+            "url": null,
+            "linkType": null,
+            "linkRef": [],
+            "linkColor": "black",
+            "linkWidth": 2,
+            "linkDashStyle": null,
+            "containerRef": null,
+            "definedAttributes": [],
+            "required": false,
+            "rules": {
+              "values": null,
+              "min": null,
+              "max": null,
+              "regex": null
+            }
+          },
+          {
+            "name": "environment",
+            "type": "String",
+            "displayName": null,
+            "description": null,
+            "displayType": null,
+            "expanded": false,   
+            "url": null,
+            "linkType": null,
+            "linkRef": [],
+            "linkColor": "black",
+            "linkWidth": 2,
+            "linkDashStyle": null,
+            "containerRef": null,
+            "definedAttributes": [],
+            "required": false,
+            "rules": {
+              "values": null,
+              "min": null,
+              "max": null,
+              "regex": null
+            }
+          }
+          
+    ],
+    "isContainer": false,
+    "displayType": "workflow",          
+    "preventChildrenMovement": false,
+    "childrenPerLine": null
+  },
+  {
+    "type": "service",
+    "icon": "DefaultService",
+    "model": "jobCi",
+    "displayName": "service",
+    "description": null,
+    "url": null,
+    "parentTypes": [
+      "gitlabCi"
+    ],
+    "childrenTypes": [],
+    "definedAttributes": [
+      {
+        "name": "gitlabCi_id",
+        "type": "Reference",
+        "displayName": "Id of gitlabCi",
+        "description": null,
+        "displayType": null,
+        "expanded": false,   
+        "url": null,
+        "linkType": null,
+        "linkRef": [],
+        "linkColor": "black",
+        "linkWidth": 2,
+        "linkDashStyle": null,
+        "containerRef": "gitlabCi",
+        "definedAttributes": [],
+        "required": true,
+        "rules": {
+          "values": null,
+          "min": null,
+          "max": null,
+          "regex": null
+        }
+      },
+      {
+          "name": "name",
+          "type": "String",
+          "displayName": null,
+          "description": null,
+          "displayType": null,
+          "expanded": false,   
+          "url": null,
+          "linkType": null,
+          "linkRef": [],
+          "linkColor": "black",
+          "linkWidth": 2,
+          "linkDashStyle": null,
+          "containerRef": null,
+          "definedAttributes": [],
+          "required": true,
+          "rules": {
+            "values": null,
+            "min": null,
+            "max": null,
+            "regex": null
+          }
+        },
+        {
+          "name": "alias",
+          "type": "String",
+          "displayName": null,
+          "description": null,
+          "displayType": null,
+          "expanded": false,   
+          "url": null,
+          "linkType": null,
+          "linkRef": [],
+          "linkColor": "black",
+          "linkWidth": 2,
+          "linkDashStyle": null,
+          "containerRef": null,
+          "definedAttributes": [],
+          "required": false,
+          "rules": {
+            "values": null,
+            "min": null,
+            "max": null,
+            "regex": null
+          }
+        },
+        {
+          "name": "entrypoint",
+          "type": "String",
+          "displayName": null,
+          "description": null,
+          "displayType": null,
+          "expanded": false,   
+          "url": null,
+          "linkType": null,
+          "linkRef": [],
+          "linkColor": "black",
+          "linkWidth": 2,
+          "linkDashStyle": null,
+          "containerRef": null,
+          "definedAttributes": [],
+          "required": false,
+          "rules": {
+            "values": null,
+            "min": null,
+            "max": null,
+            "regex": null
+          }
+        }
+    ],
+    "isContainer": false,
+    "displayType": "workflow",
+    "preventChildrenMovement": false,
+    "childrenPerLine": null
+  }
+]
