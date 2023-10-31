@@ -1,55 +1,59 @@
 {
   "name": "gitlabator-plugin",
   "version": "0.1.0",
-  "description": "Gitlab plugin for Leto-Modelizer.",
+  "description": "gitlab-plugin for leto-modelizer",
   "main": "dist/gitlabator-plugin.js",
   "exports": "./dist/gitlabator-plugin.js",
   "scripts": {
     "build": "webpack",
     "build:docs": "jsdoc --readme README.md --package package.json -r ./src/ -c jsdoc.config.json -d docs",
-    "lint": "eslint --max-warnings=0 --ext .js src",
-    "lint:fix": "eslint --max-warnings=0 --fix --ext .js src",
-    "lint:report": "eslint --max-warnings=0 --ext .js src -f json-relative > eslint.json",
+    "lint": "eslint --ext .js src",
+    "lint:fix": "eslint --fix --ext .js src",
+    "lint:report": "eslint --ext .js src -f json-relative > eslint.json",
     "prepare:docs": "sed -i 's#taffydb#@jsdoc/salty#g' node_modules/better-docs/publish.js",
     "test": "jest",
     "test:coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ditrit/gitlabator-plugin.git"
+    "url": "git+https://github.com/kaiedhazem/gitlabator-plugin.git"
   },
   "keywords": [
     "Leto-modelizer",
-    "gitlabator-plugin",
-    "gitlab"
+    "gitlabator-plugin"
   ],
-  "author": "Vincent Moittie <moittie.vincent@gmail.com>",
+  "author": "Kaied Hazem <gaiedhazem@gmail.com>",
   "license": "Mozilla Public License 2.0",
   "bugs": {
-    "url": "https://github.com/ditrit/gitlabator-plugin/issues"
+    "url": "https://github.com/kaiedhazem/gitlabator-plugin.git/issues"
   },
-  "homepage": "https://github.com/ditrit/gitlabator-plugin#readme",
+  "homepage": "https://github.com/kaiedhazem/gitlabator-plugin.git#readme",
   "dependencies": {
-    "leto-modelizer-plugin-core": "github:ditrit/leto-modelizer-plugin-core#0.17.0"
+    "leto-modelizer-plugin-core": "github:ditrit/leto-modelizer-plugin-core#0.21.0",
+    "lidy-js": "github:ditrit/lidy-js#1.0.1",
+    "nunjucks": "=3.2.4"
   },
   "devDependencies": {
-    "@babel/core": "=7.22.9",
-    "@babel/preset-env": "=7.22.9",
-    "babel-jest": "=29.6.1",
-    "babel-loader": "=9.1.3",
-    "better-docs": "=2.7.2",
-    "eslint": "=8.45.0",
-    "eslint-config-airbnb-base": "=15.0.0",
-    "eslint-formatter-json-relative": "=0.1.0",
-    "eslint-plugin-import": "=2.27.5",
-    "eslint-plugin-jest": "=27.2.3",
-    "eslint-plugin-jsdoc": "=46.4.4",
-    "eslint-webpack-plugin": "=4.0.1",
-    "jest": "=29.6.1",
-    "jest-environment-jsdom": "=29.6.1",
-    "jest-sonar-reporter": "=2.0.0",
-    "jsdoc": "=4.0.2",
-    "webpack": "=5.88.1",
-    "webpack-cli": "=5.1.4"
+    "@babel/core": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
+    "babel-jest": "^29.7.0",
+    "babel-loader": "^9.1.3",
+    "better-docs": "^2.7.2",
+    "eslint": "^8.51.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-formatter-json-relative": "^0.1.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-jest": "^27.4.2",
+    "eslint-plugin-jsdoc": "^44.2.7",
+    "eslint-webpack-plugin": "^4.0.1",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jest-sonar-reporter": "^2.0.0",
+    "js-yaml": "^4.1.0",
+    "jsdoc": "^4.0.2",
+    "leto-modelizer-plugin-core": "github:ditrit/leto-modelizer-plugin-core#0.21.0",
+    "lidy-js": "github:ditrit/lidy-js#main",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
   }
 }

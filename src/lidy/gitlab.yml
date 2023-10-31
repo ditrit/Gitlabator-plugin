@@ -1,0 +1,55 @@
+main: gitlabCi
+
+gitlabCi:
+  _mapFacultative:
+    name: gitlabCiName
+    variables: gitlabCiVariables
+    services:
+      _listOf: service
+    stages: gitlabCiStages
+    tags: gitlabCiTags
+  _mapOf:
+    jobCiId: jobCi
+
+gitlabCiName: string
+gitlabCiVariables:
+  _mapOf: {string : string}
+gitlabCiStages:
+  _listOf: string
+gitlabCiTags:
+  _listOf: string
+
+service:
+  _mapFacultative:
+    name: string
+    alias: string
+    entrypoint: string
+
+serviceId: string
+
+jobCi:
+  _mapFacultative:
+    tags: jobCiTags
+    image: jobCiImage
+    stage: jobCiStage
+    before_script: jobCiBeforescript
+    script: jobCiScript
+    after_script: jobCiAfterscript
+    only: jobCiOnly
+    when: jobCiWhen
+    environment: jobCiEnvironment
+
+jobCiTags:
+  _listOf: string
+jobCiId: string
+jobCiImage: string
+jobCiStage: string
+jobCiBeforescript:
+  _listOf: string
+jobCiScript:
+  _listOf: string
+jobCiAfterscript:
+  _listOf: string
+jobCiOnly: string
+jobCiWhen: string
+jobCiEnvironment: string
